@@ -1,0 +1,12 @@
+<h1>Restaurants:</h1>
+
+<% @restaurants.each do |t| %>
+
+  <div>
+    <%= link_to (t.name).capitalize, restaurant_path(t) %>
+  </div>
+
+<% end %>
+
+<hr>
+<%= link_to "Add NEW!!!", new_restaurant_path, class: "btn btn-info" %>
